@@ -1,0 +1,45 @@
+# --- LaTeX 基本临时文件 ---
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.pdf_tex
+*.spl
+
+# beamer/pgf/tikz/gnuplot 等
+*.nav
+*.snm
+*.vrb
+*.tikz
+*.gnuplot
+
+# minted 的缓存目录（名称形如 _minted-<jobname>）
+_minted*/
+*.pyg
+
+# latexmk/tectonic 之类的临时目录
+latex.out/
+build/
+out/
+auto/
+
+# 编辑器与系统垃圾
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+*.swo
