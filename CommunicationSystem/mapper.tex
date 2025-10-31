@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[scale=3]
+
+    \draw[help lines,gray!30] (-1.5,-1.5) grid (1.5,1.5);
+    
+    \draw[-{Stealth[scale=1.2]}] (-1.5,0) -- (1.5,0) node[above] {$\phi_I$};
+    \draw[-{Stealth[scale=1.2]}] (0,-1.5) -- (0,1.5) node[right] {$\phi_Q$};
+
+    \draw[dashed,gray!50] (0,0) circle (1);
+    
+    \fill[blue] ({1/sqrt(2)},{1/sqrt(2)}) circle (0.03);
+    \node[above right] at ({1/sqrt(2)},{1/sqrt(2)}) {\footnotesize 00};
+    
+    \fill[blue] ({-1/sqrt(2)},{1/sqrt(2)}) circle (0.03);
+    \node[above left] at ({-1/sqrt(2)},{1/sqrt(2)}) {\footnotesize 01};
+    
+    \fill[blue] ({-1/sqrt(2)},{-1/sqrt(2)}) circle (0.03);
+    \node[below left] at ({-1/sqrt(2)},{-1/sqrt(2)}) {\footnotesize 11};
+    
+    \fill[blue] ({1/sqrt(2)},{-1/sqrt(2)}) circle (0.03);
+    \node[below right] at ({1/sqrt(2)},{-1/sqrt(2)}) {\footnotesize 10};
+\end{tikzpicture}
+\end{document}
