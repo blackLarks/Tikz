@@ -7,30 +7,30 @@
 \begin{tikzpicture}[scale=3]
 
     % Fill the four quadrants with different colors
-    \fill[red!20] (0,0) -- (1.5,0) -- (1.5,1.5) -- (0,0) -- cycle;
-    \fill[blue!20] (0,0) -- (1.5,1.5) -- (0,1.5) -- (0,0) -- cycle;
-    \fill[green!20] (0,0) -- (-1.5,1.5) -- (0,1.5) -- (0,0) -- cycle;
-    \fill[yellow!20] (0,0) -- (-1.5,0) -- (-1.5,1.5) -- (0,0) -- cycle;
-    \fill[red!50] (0,0) -- (-1.5,0) -- (-1.5,-1.5) -- (0,0) -- cycle;
-    \fill[blue!50] (0,0) -- (-1.5,-1.5) -- (0,-1.5) -- (0,0) -- cycle;
-    \fill[green!50] (0,0) -- (1.5,-1.5) -- (0,-1.5) -- (0,0) -- cycle;
-    \fill[yellow!50] (0,0) -- (1.5,0) -- (1.5,-1.5) -- (0,0) -- cycle;
+    \fill[red!20] (0,0) -- ({1.5},{1.5*tan(pi/8 r)}) -- ({1.5},{-1.5*tan(pi/8 r)}) -- (0,0) -- cycle;
+    \fill[blue!20] (0,0) -- ({1.5}, {1.5*tan(pi/8 r)}) -- (1.5, 1.5) -- ({1.5*tan(pi/8 r)}, 1.5)-- (0,0) -- cycle;
+    \fill[green!20] (0,0) -- ({1.5*tan(pi/8 r)}, 1.5) -- (-{1.5*tan(pi/8 r)}, 1.5) -- (0,0) -- cycle;
+    \fill[yellow!20] (0,0) -- ({-1.5}, {1.5*tan(pi/8 r)}) -- (-1.5, 1.5) -- (-{1.5*tan(pi/8 r)}, 1.5)-- (0,0) -- cycle;
+    \fill[red!50] (0,0) -- ({-1.5},{1.5*tan(pi/8 r)}) -- ({-1.5},{-1.5*tan(pi/8 r)}) -- (0,0) -- cycle;
+    \fill[blue!50] (0,0) -- ({-1.5}, {-1.5*tan(pi/8 r)}) -- (-1.5, -1.5) -- ({-1.5*tan(pi/8 r)}, -1.5)-- (0,0) -- cycle;
+    \fill[green!50] (0,0) -- ({-1.5*tan(pi/8 r)}, -1.5) -- ({1.5*tan(pi/8 r)}, -1.5) -- (0,0) -- cycle;
+    \fill[yellow!50] (0,0) -- ({1.5}, {-1.5*tan(pi/8 r)}) -- (1.5, -1.5) -- ({1.5*tan(pi/8 r)}, -1.5)-- (0,0) -- cycle;
     
     % Add region labels (Gamma)
-    \node at (0.4,0.15) {$\Gamma_1$};
-    \node at (0.15,0.4) {$\Gamma_2$};
-    \node at (-0.15,0.4) {$\Gamma_3$};
-    \node at (-0.4,0.15) {$\Gamma_4$};
-    \node at (-0.4,-0.15) {$\Gamma_5$};
-    \node at (-0.15,-0.4) {$\Gamma_6$};
-    \node at (0.15,-0.4) {$\Gamma_7$};
-    \node at (0.4,-0.15) {$\Gamma_8$};
+    \node at (0.4, 0) {$\Gamma_1$};
+    \node at ({0.4*cos(pi/4 r)},{0.4*sin(pi/4 r)}) {$\Gamma_2$};
+    \node at (0,0.4) {$\Gamma_3$};
+    \node at (-{0.4*cos(pi/4 r)},{0.4*sin(pi/4 r)}) {$\Gamma_4$};
+    \node at (-0.4,0) {$\Gamma_5$};
+    \node at (-{0.4*cos(pi/4 r)},{-0.4*sin(pi/4 r)}) {$\Gamma_6$};
+    \node at (0,-0.4) {$\Gamma_7$};
+    \node at ({0.4*cos(pi/4 r)},{-0.4*sin(pi/4 r)}) {$\Gamma_8$};
 
     \draw[help lines,gray!30] (-1.5,-1.5) grid (1.5,1.5);
     
     \draw[-{Stealth[scale=1.2]}] (-1.5,0) -- (1.5,0) node[above, xshift=-10pt] {$\phi_I$};
     \draw[-{Stealth[scale=1.2]}] (0,-1.5) -- (0,1.5) node[right, yshift=-10pt] {$\phi_Q$};
-
+    
     \draw[dashed,gray!50] (0,0) circle (1);
     
     % Constellation points
